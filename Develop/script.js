@@ -7,8 +7,9 @@ generateBtn.addEventListener('click', () => {
   if (passwordLength >= 8 && passwordLength <= 124) {
     console.log("password meets criteria")
     var lowercase = confirm("Do you want your password to contain lowercase letters?")
-    if (answer === true){
-      alert("lowercse in password")
+    if (lowercase === true){
+      alert("lowercase in password")
+      console.log("lowercase allowed")
     }
 
   } 
