@@ -4,27 +4,23 @@ const generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener('click', () => {
 
   var passwordLength = prompt("Enter a value betweeen 8 and 124.")
-  if (passwordLength >= 8) {
-    console.log("long enough")
-    if (passwordLength <= 128) {
-      console.log("short enough")
+  if (passwordLength >= 8 && passwordLength <= 124) {
+    console.log("password meets criteria")
+    var lowercase = confirm("Do you want your password to contain lowercase letters?")
+    if (answer === true){
+      alert("lowercse in password")
     }
+
+  } 
+  else{
+    alert("Password must be a numeric value and between 8 and 124 charecters")
   }
+
 }
 )
-  //   alert("password is too long")
-
-  // alert("password not long enough")
-
-
-
-// if {  //button pressed
-//   var charecterQuantity = prompt("Enter a value betweeen 8 and 124.")
-// } 
 
 
 // get values
-//get lowercase letters
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
   }
@@ -41,16 +37,6 @@ function getRandomSymbol() {
     const symbols = '!@#$%^&*()<>?:",./;-[]{}|`~=';
     return symbols[Math.floor(Math.random() * symbols.length)];
   }
-//random rumber
-console.log(Math.floor(Math.random() * 26) + 97);
-//random lower case
-console.log(String.fromCharCode(Math.floor(Math.random() * 26) + 97));
-//random uppercase
-console.log(String.fromCharCode(Math.floor(Math.random() * 26) + 65));
-//random number
-const symbols = '!@#$%^&*()<>?:",./;-[]{}|`~=';
-console.log(symbols[Math.floor(Math.random() * symbols.length)]);
-
 
 // Write password to the #password input
 function writePassword() {
