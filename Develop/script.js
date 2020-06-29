@@ -1,12 +1,15 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
-
+//working pretty well
 generateBtn.addEventListener('click', () => {
 
-  var passwordLength = prompt("Enter a value betweeen 8 and 124.")
-  if (passwordLength >= 8 && passwordLength <= 124) {
+  var passwordLength = prompt("Enter a value betweeen 8 and 128.")
+  if (passwordLength >= 8 && passwordLength <= 128) {
     console.log("password meets criteria")
     var lowercase = confirm("Do you want your password to contain lowercase letters?")
+    var uppercase = confirm("Do you want your password to contain uppercase letters?")
+    var number = confirm("Do you want your password to contain numbers?")
+    var symbol = confirm("Do you want your password to contain symbols?")
     if (lowercase === true){
       alert("lowercase in password")
       console.log("lowercase allowed")
@@ -20,6 +23,21 @@ generateBtn.addEventListener('click', () => {
 }
 )
 
+//attempt at making things look better, this idea is from assignment 33
+// var questions = [
+//   { q: "Do you want your password to contain lowercase letters?", a: [Array.fromCharCode(range(65,81))] },
+//   { q: "Do you want your password to contain uppercase letters?", a: "t" },
+//   { q: "Do you want your password to contain numbers?", a: "f" },
+//   { q: "Do you want your password to contain symbols?", a: "f" },
+// ];
+
+
+
+console.log( String.fromCharCode( range(97, 123)))
+
+
+
+
 
 // get values
 function getRandomLower() {
@@ -27,9 +45,6 @@ function getRandomLower() {
   }
 function getRandomUpper() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-  }
-function getRandomNumber() {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
   }
 function getRandomNumber() {
     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
