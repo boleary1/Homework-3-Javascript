@@ -1,26 +1,6 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
-//working pretty well
 
-generateBtn.addEventListener('click', () => {
-
-  var passwordLength = prompt("Enter a value betweeen 8 and 128.")
-  if (passwordLength >= 8 && passwordLength <= 128) {
-
-    var largeArray = [].concat(lowercase, uppercase, number, symbol)
-    var lowercase = (confirm("Do you want your password to contain lowercase letters?")) ? lowerCaseArray : [];
-    var uppercase = (confirm("Do you want your password to contain uppercase letters?")) ? upperCaseArray : [];
-    var number = (confirm("Do you want your password to contain numbers?")) ? numberArray : [];
-    var symbol = (confirm("Do you want your password to contain symbols?")) ? symbolArray : [];
-    console.log(largeArray)
-
-  }
-  else {
-    alert("Password must be a numeric value and between 8 and 124 charecters")
-  }
-
-}
-)
 
 //lists all values from range
 let lowerCaseArray = []
@@ -40,6 +20,40 @@ for (n = 48; n < (48 + 10); n++) {
 }
 const symbols = '!@#$%^&*()<>?:",./;-[]{}|`~=';
 let symbolArray = Array.from(symbols)
+
+
+generateBtn.addEventListener('click', () => {
+
+  var passwordLength = prompt("Enter a value betweeen 8 and 128.")
+  if (passwordLength >= 8 && passwordLength <= 128) {
+
+    var largeArray = []
+    var lowercase = confirm("Do you want your password to contain lowercase letters?") 
+      if (lowercase == 1){
+        largeArray.push(lowerCaseArray.join(''))
+      }
+    var uppercase = confirm("Do you want your password to contain uppercase letters?")
+      if (uppercase == 1){
+        largeArray.push(upperCaseArray.join(''))
+      }
+    var number = confirm("Do you want your password to contain numbers?")
+      if (number == 1){
+        largeArray.push(numberArray.join(''))
+      }
+    var symbol = confirm("Do you want your password to contain symbols?")
+      if (symbol == 1){
+        largeArray.push(symbolArray.join(''))
+      }
+    const randomValue = largeArray[Math.floor(Math.random() * largeArray.length)];
+    console.log(randomValue)
+
+  }
+  else {
+    alert("Password must be a numeric value and between 8 and 124 charecters")
+  }
+}
+)
+
 
 
 // get values
