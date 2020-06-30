@@ -1,4 +1,6 @@
 // Assignment Code
+
+//large array is working, console log that to re-find my spot
 const generateBtn = document.querySelector("#generate");
 
 
@@ -28,6 +30,7 @@ generateBtn.addEventListener('click', () => {
   if (passwordLength >= 8 && passwordLength <= 128) {
 
     var largeArray = []
+    var megaArray = [largeArray.join('')]
     var lowercase = confirm("Do you want your password to contain lowercase letters?")
     if (lowercase == 1) {
       largeArray.push(lowerCaseArray.join(''))
@@ -50,7 +53,8 @@ generateBtn.addEventListener('click', () => {
       var randomValue = largeArray[Math.floor(Math.random() * largeArray.length)];
       finalPassword.push(randomValue)
     }
-    console.log(finalPassword)
+   
+    console.log(largeArray)
 
   }
   else {
