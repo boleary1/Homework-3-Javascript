@@ -56,8 +56,9 @@ var n; //n for lowercase
 for (n = 48; n < (48 +10); n++) {
   numberArray.push(String.fromCharCode(n));
 }
-
-console.log(numberArray)
+const symbols = '!@#$%^&*()<>?:",./;-[]{}|`~=';
+let symbolArray = Array.from(symbols)
+console.log(symbolArray) //delete this later
 
 
 // get values
