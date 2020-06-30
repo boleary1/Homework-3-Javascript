@@ -28,24 +28,29 @@ generateBtn.addEventListener('click', () => {
   if (passwordLength >= 8 && passwordLength <= 128) {
 
     var largeArray = []
-    var lowercase = confirm("Do you want your password to contain lowercase letters?") 
-      if (lowercase == 1){
-        largeArray.push(lowerCaseArray.join(''))
-      }
+    var lowercase = confirm("Do you want your password to contain lowercase letters?")
+    if (lowercase == 1) {
+      largeArray.push(lowerCaseArray.join(''))
+    }
     var uppercase = confirm("Do you want your password to contain uppercase letters?")
-      if (uppercase == 1){
-        largeArray.push(upperCaseArray.join(''))
-      }
+    if (uppercase == 1) {
+      largeArray.push(upperCaseArray.join(''))
+    }
     var number = confirm("Do you want your password to contain numbers?")
-      if (number == 1){
-        largeArray.push(numberArray.join(''))
-      }
+    if (number == 1) {
+      largeArray.push(numberArray.join(''))
+    }
     var symbol = confirm("Do you want your password to contain symbols?")
-      if (symbol == 1){
-        largeArray.push(symbolArray.join(''))
-      }
-    const randomValue = largeArray[Math.floor(Math.random() * largeArray.length)];
-    console.log(randomValue)
+    if (symbol == 1) {
+      largeArray.push(symbolArray.join(''))
+    }
+
+    let finalPassword = [];
+    for (i = 0; i < passwordLength; i++) {
+      var randomValue = largeArray[Math.floor(Math.random() * largeArray.length)];
+      finalPassword.push(randomValue)
+    }
+    console.log(finalPassword)
 
   }
   else {
@@ -55,21 +60,6 @@ generateBtn.addEventListener('click', () => {
 )
 
 
-
-// get values
-function getRandomLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-function getRandomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-function getRandomSymbol() {
-  const symbols = '!@#$%^&*()<>?:",./;-[]{}|`~=';
-  return symbols[Math.floor(Math.random() * symbols.length)];
-}
 
 // // Write password to the #password input
 // function writePassword() {
