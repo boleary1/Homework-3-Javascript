@@ -41,14 +41,23 @@ const generateBtn = document.querySelector("#generate");
 
 
 //lists all values from range
-let arr = []
-var i;
-for (i = 97; i < (97 +26); i++) {
-  console.log( String.fromCharCode( i )) ;
-  arr.push(String.fromCharCode( i ));
+let lowerCaseArray = []
+var l; //l for lowercase
+for (l = 97; l < (97 +26); l++) {
+  lowerCaseArray.push(String.fromCharCode(l));
+}
+let upperCaseArray = []
+var u; //u for lowercase
+for (u = 65; u < (65 +26); u++) {
+  upperCaseArray.push(String.fromCharCode(u));
+}
+let numberArray = []
+var n; //n for lowercase
+for (n = 48; n < (48 +10); n++) {
+  numberArray.push(String.fromCharCode(n));
 }
 
-console.log(arr)
+console.log(numberArray)
 
 
 // get values
