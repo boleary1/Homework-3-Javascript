@@ -48,13 +48,19 @@ generateBtn.addEventListener('click', () => {
       largeArray.push(symbolArray.join(''))
     }
 
+    var str= [largeArray.join('')]
+    var superArray = str.split()
+    console.log(superArray)
+    console.log(typeof megaArray)
     let finalPassword = [];
     for (i = 0; i < passwordLength; i++) {
-      var randomValue = largeArray[Math.floor(Math.random() * largeArray.length)];
+      var randomValue = megaArray[Math.floor(Math.random() * megaArray.length)];
       finalPassword.push(randomValue)
+      console.log(megaArray.substring(Math.floor(Math.random() * megaArray.length)))
     }
-   
+  
     console.log(largeArray)
+    console.log(finalPassword)
 
   }
   else {
