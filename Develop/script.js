@@ -61,7 +61,7 @@ generateBtn.addEventListener('click', () => { //event listner starts the whole p
   }
   }
   else { //alert
-    alert("Password must be a numeric value and between 8 and 124 charecters")
+    alert("Password must be a numeric value and between 8 and 128 characters")
   }
 }
 )
