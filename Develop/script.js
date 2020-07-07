@@ -2,22 +2,19 @@
 
 //large array is working, console log that to re-find my spot
 const generateBtn = document.querySelector("#generate");
-
+const passwordText = document.querySelector("#password");
 
 //lists all values from range
-let lowerCaseArray = []
-var l; //l for lowercase
-for (l = 97; l < (97 + 26); l++) {
+const lowerCaseArray = []
+for (let l = 97; l < (97 + 26); l++) {
   lowerCaseArray.push(String.fromCharCode(l));
 }
-let upperCaseArray = []
-var u; //u for lowercase
-for (u = 65; u < (65 + 26); u++) {
+const upperCaseArray = []
+for (let u = 65; u < (65 + 26); u++) {
   upperCaseArray.push(String.fromCharCode(u));
 }
-let numberArray = []
-var n; //n for lowercase
-for (n = 48; n < (48 + 10); n++) {
+const numberArray = []
+for (let n = 48; n < (48 + 10); n++) {
   numberArray.push(String.fromCharCode(n));
 }
 const symbols = '!@#$%^&*()<>?:",./;-[]{}|`~=';
@@ -26,45 +23,42 @@ let symbolArray = Array.from(symbols)
 
 generateBtn.addEventListener('click', () => {
 
-  var passwordLength = prompt("Enter a value betweeen 8 and 128.")
+  const passwordLength = prompt("Enter a value betweeen 8 and 128.")
   if (passwordLength >= 8 && passwordLength <= 128) {
+    
 
-    var largeArray = []
-    var megaArray = [largeArray.join('')]
-    var lowercase = confirm("Do you want your password to contain lowercase letters?")
-    if (lowercase == 1) {
+    const largeArray = []
+    const lowercase = confirm("Do you want your password to contain lowercase letters?")
+    if (lowercase ) {
       largeArray.push(lowerCaseArray.join(''))
     }
-    var uppercase = confirm("Do you want your password to contain uppercase letters?")
-    if (uppercase == 1) {
+
+    const uppercase = confirm("Do you want your password to contain uppercase letters?")
+    if (uppercase) {
       largeArray.push(upperCaseArray.join(''))
     }
-    var number = confirm("Do you want your password to contain numbers?")
-    if (number == 1) {
+    const number = confirm("Do you want your password to contain numbers?")
+    if (number) {
       largeArray.push(numberArray.join(''))
     }
-    var symbol = confirm("Do you want your password to contain symbols?")
-    if (symbol == 1) {
+    const symbol = confirm("Do you want your password to contain symbols?")
+    if (symbol) {
       largeArray.push(symbolArray.join(''))
     }
+    if(lowercase && uppercase && number && symbol ){
+    const megaArray = [largeArray.join('')]
+    const superArray =megaArray[0].split("")
 
-    var megaArray = [largeArray.join('')]
-
-    // var superArray = str.split()
-    // console.log(superArray)
-    console.log(typeof megaArray)
-    let finalPassword = [];
+    let finalPassword = "";
     for (i = 0; i < passwordLength; i++) {
-      var randomValue = megaArray[Math.floor(Math.random() * megaArray.length)];
-      finalPassword.push(randomValue)
+      var randomValue = superArray[Math.floor(Math.random() * superArray.length)];
+      finalPassword+=randomValue
     }
-
-    console.log(largeArray)
-    console.log(finalPassword)
-    console.log(megaArray.length)
-    // console.log(megaArray.substring(Math.floor(Math.random() * megaArray.length)))
-    console.log(Math.random() * megaArray.length)
-
+    passwordText.value = finalPassword;
+  }
+  else{
+    alert("you must select atleast one option.")
+  }
   }
   else {
     alert("Password must be a numeric value and between 8 and 124 charecters")
@@ -74,14 +68,4 @@ generateBtn.addEventListener('click', () => {
 
 
 
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
-
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
