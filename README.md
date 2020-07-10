@@ -15,7 +15,7 @@ Last edit was 7/9/2020 by Brian O'leary.  Contact oleary.brian1@gmail.com with a
 ## **Screenshot:**
 
 #### About Me:
-![Large about me screen shot](https://github.com/boleary1/Homework-2-CSS-Bootstrap/blob/master/Assets/images/about%20me%201.JPG?raw=true)
+![Large about me screen shot](screenshot.JPG)
 #### Contact:
 ![Large contact me screen shot](https://github.com/boleary1/Homework-2-CSS-Bootstrap/blob/master/Assets/images/contact%201.JPG?raw=true)
 #### Portfolio:
