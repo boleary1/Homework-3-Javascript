@@ -14,12 +14,13 @@ Last edit was 7/9/2020 by Brian O'leary.  Contact oleary.brian1@gmail.com with a
 
 ## **Screenshot:**
 
-#### About Me:
 ![Large about me screen shot](screenshot.JPG)
-#### Contact:
-![Large contact me screen shot](https://github.com/boleary1/Homework-2-CSS-Bootstrap/blob/master/Assets/images/contact%201.JPG?raw=true)
-#### Portfolio:
-![Large Portfolio screen shot](https://github.com/boleary1/Homework-2-CSS-Bootstrap/blob/master/Assets/images/potfolio%20screen%20shot.JPG?raw=true)
+
+
+
+## **Original assignment description below:**
+
+### Directions
 
 Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 
